@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2db24791-f951-4bd0-bd47-8236876575f7" name="Default Changelist" comment="" />
+    <list default="true" id="2db24791-f951-4bd0-bd47-8236876575f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/JoinUs/JoinUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/JoinUs/JoinUs.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +65,9 @@
       <updated>1586122287121</updated>
       <workItem from="1586122288450" duration="37572000" />
       <workItem from="1586291792017" duration="15603000" />
+      <workItem from="1586355690243" duration="546000" />
+      <workItem from="1586378964278" duration="3695000" />
+      <workItem from="1586455809655" duration="4079000" />
     </task>
     <servers />
   </component>

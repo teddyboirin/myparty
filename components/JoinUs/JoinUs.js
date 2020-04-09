@@ -7,78 +7,94 @@ import {set} from "react-native-reanimated";
 
 
 export default function Navigation() {
-    const [firstName, setFirstName] = useState();
-    const [lastName, setLastName] = useState();
-    const [dateOfBirth, setDateOfBirth] = useState();
-    const [email, setEmail] = useState();
-    const [town, setTown] = useState();
-    const [password, setPassword] = useState();
+    const [getFirstName, setFirstName] = useState();
+    const [getLastName, setLastName] = useState();
+    const [getDateOfBirth, setDateOfBirth] = useState();
+    const [getEmail, setEmail] = useState();
+    const [getTown, setTown] = useState();
+    const [getPassword, setPassword] = useState();
     const [submit, setSubmit] = useState(false);
 
 
     const sendValues = () => {
-        let formData = new FormData();
-        formData.append('firstName', firstName);
-        formData.append('lastName', lastName);
-        formData.append('dateOfBirth', dateOfBirth);
-        formData.append('email', email);
-        formData.append('town', town);
-        formData.append('password', password);
-        axios.post("http://localhost:8888/api/", formData)
+        let values = {
+            firstName: getFirstName,
+            lastName: getLastName,
+            email : getEmail,
+            password: getPassword,
+            town: getTown,
+            dateOfBirth: getDateOfBirth
+        };
+        axios.defaults.headers.post['Content-Type'] = 'application/json';
+        axios.post("http://127.0.0.1:8000/api/users", values)
             .then(
                 setSubmit(true)
-            )
+            ).then(
+                console.log(getFirstName + ' ' + getLastName + ' ajouté !')
+
+        )
             .catch(err => console.log(err));
     };
 
+    const forms = () => {
+        return submit === false ? (
+            <View>
+
+            </View>
+        ) : (
+            <View>
+                <View style={styles.header}><Text>Nous rejoindre</Text>
+                </View>
+                <View style={styles.containerInput}>
+                    <View style={styles.secondInputContainerTwoInputs}>
+                        <Text style={styles.titleInput}>Nom</Text>
+                        <TextInput style={styles.textInput}
+                                   autoCapitalize={"sentences"}
+                                   placeholder={"Boirin"}
+                                   textContentType={"familyName"}
+                                   onChange={(e) => setFirstName(e.nativeEvent.text)}
+                        />
+                    </View>
+                    <View style={styles.secondInputContainerTwoInputs}>
+                        <Text style={styles.titleInput}>Prénom</Text>
+                        <TextInput style={styles.textInput} autoCapitalize={"sentences"} placeholder={"Teddy"} textContentType={"familyName"} onChange={(e) => setLastName(e.nativeEvent.text)}/>
+                    </View>
+                    <View style={styles.containerInput}>
+                        <Text style={styles.titleInput}>Date de naissance</Text>
+                        <TextInput style={styles.textInput} keyboardType={"numbers-and-punctuation"} placeholder={"17/09/1997"} onChange={(e) => setDateOfBirth(e.nativeEvent.text)}/>
+                    </View>
+                    <View style={styles.containerInput}>
+                        <Text style={styles.titleInput}>Adresse mail</Text>
+                        <TextInput style={styles.textInput} autoCapitalize={"none"} keyboardType={"email-address"} placeholder={"mail@mail.fr"} textContentType={"emailAddress"} onChange={(e) => setEmail(e.nativeEvent.text)}/>
+                    </View>
+                    <View style={styles.containerInput}>
+                        <Text style={styles.titleInput}>Ville</Text>
+                        <TextInput style={styles.textInput} autoCapitalize={"sentences"} placeholder={"Paris"} textContentType={"addressCity"} onChange={(e) => setTown(e.nativeEvent.text)}/>
+                    </View>
+                    <View style={styles.containerInput}>
+                        <Text style={styles.titleInput}>Mot de passe</Text>
+                        <TextInput style={styles.textInput} autoCapitalize={"none"} secureTextEntry={ true } textContentType={"password"} onChange={(e) => setPassword(e.nativeEvent.text)}/>
+                    </View>
+                </View>
+
+                <View style={{alignItems: 'center'}}>
+                    <TouchableOpacity
+                        style={styles.buttonShadowConnect}
+                        onPress={sendValues}
+                    >
+                        <LinearGradient style={styles.button} colors={['#FD867E', '#FD7EAC']} start={[0, 0.65]} end={[0.70, 1]} >
+                            <Text style={styles.textButton}>Je m'inscris</Text>
+                        </LinearGradient>
+                    </TouchableOpacity>
+                </View>
+            </View>
+        )
+    }
+
     return (
         <View>
-            <View style={styles.header}><Text>Nous rejoindre</Text>
-            </View>
-            <Text>{firstName}</Text>
-            <View style={styles.containerInput}>
-                <View style={styles.secondInputContainerTwoInputs}>
-                    <Text style={styles.titleInput}>Nom</Text>
-                    <TextInput style={styles.textInput}
-                               autoCapitalize={"sentences"}
-                               placeholder={"Boirin"}
-                               textContentType={"familyName"}
-                               onChange={(e) => setFirstName(e.nativeEvent.text)}
-                               />
-                </View>
-                <View style={styles.secondInputContainerTwoInputs}>
-                    <Text style={styles.titleInput}>Prénom</Text>
-                    <TextInput style={styles.textInput} autoCapitalize={"sentences"} placeholder={"Teddy"} textContentType={"familyName"} onChange={(e) => setLastName(e.nativeEvent.text)}/>
-                </View>
-                <View style={styles.containerInput}>
-                    <Text style={styles.titleInput}>Date de naissance</Text>
-                    <TextInput style={styles.textInput} keyboardType={"numbers-and-punctuation"} placeholder={"17/09/1997"} onChange={(e) => setDateOfBirth(e.nativeEvent.text)}/>
-                </View>
-                <View style={styles.containerInput}>
-                    <Text style={styles.titleInput}>Adresse mail</Text>
-                    <TextInput style={styles.textInput} autoCapitalize={"none"} keyboardType={"email-address"} placeholder={"mail@mail.fr"} textContentType={"emailAddress"} onChange={(e) => setEmail(e.nativeEvent.text)}/>
-                </View>
-                <View style={styles.containerInput}>
-                    <Text style={styles.titleInput}>Ville</Text>
-                    <TextInput style={styles.textInput} autoCapitalize={"sentences"} placeholder={"Paris"} textContentType={"addressCity"} onChange={(e) => setTown(e.nativeEvent.text)}/>
-                </View>
-                <View style={styles.containerInput}>
-                    <Text style={styles.titleInput}>Mot de passe</Text>
-                    <TextInput style={styles.textInput} autoCapitalize={"none"} secureTextEntry={"true"} textContentType={"password"} onChange={(e) => setPassword(e.nativeEvent.text)}/>
-                </View>
-            </View>
 
-            <View style={{alignItems: 'center'}}>
-                <TouchableOpacity
-                    style={styles.buttonShadowConnect}
-                    onPress={sendValues}
-                >
-                    <LinearGradient style={styles.button} colors={['#FD867E', '#FD7EAC']} start={[0, 0.65]} end={[0.70, 1]} >
-                        <Text style={styles.textButton}>Je m'inscris</Text>
-                    </LinearGradient>
-                </TouchableOpacity>
-            </View>
-
+            {forms()}
         </View>
         );
 }
