@@ -6,7 +6,7 @@ import axios from "axios";
 import Congratulations from "../Congratulations/Congratulations";
 import {useFonts} from "@use-expo/font";
 import Logo from "../../images/logo.svg";
-export default function JoinsUsForm(navigation) {
+export default function JoinsUsForm({navigation}) {
 
     const [getFirstName, setFirstName] = useState();
     const [getLastName, setLastName] = useState();

@@ -2,7 +2,7 @@ import React from 'react';
 import {AppLoading} from "expo";
 import {StyleSheet, Text, View} from 'react-native';
 import {useFonts} from "@use-expo/font";
-export default function ConnectForm(navigation) {
+export default function ConnectForm({navigation}) {
 
     let [fontsLoaded] = useFonts({
         'Gilroy-Regular': 'http://teddyboirin.com/fonts/Gilroy-Medium.ttf',
