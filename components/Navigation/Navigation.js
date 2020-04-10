@@ -4,7 +4,7 @@ import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 
 import Home from "../Home";
 import JoinUs from "../JoinUs/JoinUs";
-import {View} from "react-native";
+import Connect from "../Connect/Connect";
 const Drawer = createDrawerNavigator();
 
 export default class Navigation extends React.Component {
@@ -23,10 +23,11 @@ export default class Navigation extends React.Component {
             title: "teddy"
         };
         return (
-            <NavigationContainer theme={Theme} >
+            <NavigationContainer theme={Theme}>
                 <Drawer.Navigator initialRouteName="Home" drawerType={"slide"} options={options}>
                     <Drawer.Screen name="Home" component={Home} options={{ title: "Accueil" }}/>
                     <Drawer.Screen name="JoinUs" component={JoinUs} options={{ title: "Nous rejoindre" }}/>
+                    <Drawer.Screen name="Connect" component={Connect} options={{ title: "Se connecter" }}/>
                 </Drawer.Navigator>
 
             </NavigationContainer>

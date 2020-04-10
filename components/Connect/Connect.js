@@ -1,13 +1,13 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import JoinsUsForm from "../Forms/JoinsUsForm";
+import ConnectForm from "../Forms/ConnectForm";
 
-export default function Navigation() {
+export default function Connect() {
 
 
-  return (
-      <JoinsUsForm></JoinsUsForm>
-  )
+    return (
+        <ConnectForm></ConnectForm>
+    )
 }
 
 const styles = StyleSheet.create({
