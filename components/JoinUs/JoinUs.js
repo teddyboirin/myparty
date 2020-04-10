@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import JoinsUsForm from "../Forms/JoinsUsForm";
 
-export default function Navigation(navigation) {
+export default function JoinUs({navigation}) {
 
 
   return (

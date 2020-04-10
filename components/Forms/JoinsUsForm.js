@@ -5,7 +5,8 @@ import {LinearGradient} from "expo-linear-gradient";
 import axios from "axios";
 import Congratulations from "../Congratulations/Congratulations";
 import {useFonts} from "@use-expo/font";
-export default function JoinsUsForm({navigation}) {
+import Logo from "../../images/logo.svg";
+export default function JoinsUsForm(navigation) {
 
     const [getFirstName, setFirstName] = useState();
     const [getLastName, setLastName] = useState();
@@ -43,7 +44,20 @@ export default function JoinsUsForm({navigation}) {
 
 
         return submit === false ? (
-            <Congratulations firstName={getFirstName} lastName={getLastName} navigation={navigation}></Congratulations>
+            <View style={styles.isSubmit}>
+                <Logo width={300} height={100} />
+                <Text style={styles.congratulations}>Félicitations , tu peux désormais organiser tes évènements sur l'application ! </Text>
+                <View style={{marginTop:30}}>
+                    <TouchableOpacity
+                        style={styles.buttonShadowConnect}
+                        onPress={() => navigation.navigate('Connect')}>
+                        <LinearGradient style={styles.button} colors={['#FD867E', '#FD7EAC']} start={[0, 0.65]}
+                                        end={[0.70, 1]}>
+                            <Text style={styles.textButton}>Connexion</Text>
+                        </LinearGradient>
+                    </TouchableOpacity>
+                </View>
+            </View>
         ) : (
             <View style={styles.container}>
                 <View style={styles.header}><Text>Nous rejoindre</Text>

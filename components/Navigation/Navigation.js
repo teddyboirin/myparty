@@ -6,6 +6,7 @@ import Home from "../Home";
 import JoinUs from "../JoinUs/JoinUs";
 import Connect from "../Connect/Connect";
 import Congratulations from "../Congratulations/Congratulations";
+import JoinsUsForm from "../Forms/JoinsUsForm";
 const Drawer = createDrawerNavigator();
 
 export default class Navigation extends React.Component {
