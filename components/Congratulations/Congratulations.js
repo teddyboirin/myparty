@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Logo from '../../images/logo.svg';
 import ConnectButton from "../Buttons/ConnectButton";

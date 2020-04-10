@@ -2,11 +2,11 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import JoinsUsForm from "../Forms/JoinsUsForm";
 
-export default function Navigation() {
+export default function Navigation(navigation) {
 
 
   return (
-      <JoinsUsForm></JoinsUsForm>
+      <JoinsUsForm navigation={navigation}></JoinsUsForm>
   )
 }
 

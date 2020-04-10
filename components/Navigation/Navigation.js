@@ -5,6 +5,7 @@ import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import Home from "../Home";
 import JoinUs from "../JoinUs/JoinUs";
 import Connect from "../Connect/Connect";
+import Congratulations from "../Congratulations/Congratulations";
 const Drawer = createDrawerNavigator();
 
 export default class Navigation extends React.Component {

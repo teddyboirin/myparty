@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2db24791-f951-4bd0-bd47-8236876575f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Buttons/ConnectButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Buttons/JoinUsButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Congratulations/Congratulations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Connect/Connect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Forms/ConnectForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Forms/JoinsUsForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.expo/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back/api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Congratulations/Congratulations.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Congratulations/Congratulations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Connect/Connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Connect/Connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Forms/ConnectForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Forms/ConnectForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/JoinUs/JoinUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/JoinUs/JoinUs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation/Navigation.js" afterDir="false" />
     </list>
@@ -77,7 +71,10 @@
       <workItem from="1586291792017" duration="15603000" />
       <workItem from="1586355690243" duration="546000" />
       <workItem from="1586378964278" duration="3695000" />
-      <workItem from="1586455809655" duration="16251000" />
+      <workItem from="1586455809655" duration="16727000" />
+      <workItem from="1586481382304" duration="883000" />
+      <workItem from="1586482356643" duration="341000" />
+      <workItem from="1586530622663" duration="2101000" />
     </task>
     <servers />
   </component>

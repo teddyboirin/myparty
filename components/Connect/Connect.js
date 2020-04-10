@@ -2,11 +2,11 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import ConnectForm from "../Forms/ConnectForm";
 
-export default function Connect() {
+export default function Connect(navigation) {
 
 
     return (
-        <ConnectForm></ConnectForm>
+        <ConnectForm navigation={navigation}></ConnectForm>
     )
 }
 
